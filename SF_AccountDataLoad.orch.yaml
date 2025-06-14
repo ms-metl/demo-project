@@ -6,13 +6,13 @@ pipeline:
       type: "start"
       transitions:
         unconditional:
-        - "Salesforce Query"
+        - "Salesforce Query - SF_AccountDataLoad"
       parameters:
         componentName: "Start"
-    Salesforce Query:
+    Salesforce Query - SF_AccountDataLoad:
       type: "salesforce-query"
       parameters:
-        componentName: "Salesforce Query"
+        componentName: "Salesforce Query - SF_AccountDataLoad"
         basicAdvancedMode: "Basic"
         authenticationMethod: "OAuth"
         useSandbox: "No"
@@ -621,7 +621,7 @@ design:
         x: 0
         "y": 0
       tempMetlId: 1
-    Salesforce Query:
+    Salesforce Query - SF_AccountDataLoad:
       position:
         x: 160
         "y": 0
