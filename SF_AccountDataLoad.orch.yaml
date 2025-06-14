@@ -612,11 +612,4 @@ design:
   components:
     Start:
       position:
-        x: -40
-        "y": -20
-      tempMetlId: 1
-    Salesforce Query:
-      position:
-        x: 130
-        "y": -20
-      tempMetlId: 2
+
