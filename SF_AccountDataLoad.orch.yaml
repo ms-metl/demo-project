@@ -597,7 +597,6 @@ pipeline:
         - "ZI_Website__c"
         - "ZI_Year_Founded__c"
         - "Zoom_Company_ID__c"
-        - "zzMission_Critical_Support_Customer__c"
         dataSourceFilter:
         combineFilters: "And"
         limit: "100"
@@ -618,11 +617,11 @@ design:
   components:
     Start:
       position:
-        x: 0
-        "y": 0
+        x: -160
+        "y": -60
       tempMetlId: 1
     Salesforce Query:
       position:
-        x: 150
-        "y": -50
+        x: 60
+        "y": -60
       tempMetlId: 2
