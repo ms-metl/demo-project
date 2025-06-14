@@ -617,6 +617,6 @@ design:
       tempMetlId: 1
     Salesforce Query:
       position:
-        x: 110
-        "y": -80
+        x: 130
+        "y": -20
       tempMetlId: 2
