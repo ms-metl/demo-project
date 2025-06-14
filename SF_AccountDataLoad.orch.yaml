@@ -7,7 +7,6 @@ pipeline:
       transitions:
         unconditional:
         - "Salesforce Query - SF_AccountDataLoad"
-        - "Salesforce Query"
       parameters:
         componentName: "Start"
     Salesforce Query - SF_AccountDataLoad:
@@ -609,42 +608,6 @@ pipeline:
       postProcessing:
         updateOutputMessage:
         updateScalarVariables:
-    Salesforce Query:
-      type: "salesforce-query"
-      parameters:
-        componentName: "Salesforce Query"
-        basicAdvancedMode: "Basic"
-        authenticationMethod: "OAuth"
-        useSandbox: "No"
-        authentication: "SF_manish-app"
-        connectionOptions:
-        dataSource: "AccountHistory"
-        dataSelection:
-        - "AccountId"
-        - "CreatedById"
-        - "CreatedDate"
-        - "DataType"
-        - "Field"
-        - "Id"
-        - "IsDeleted"
-        - "NewValue"
-        - "OldValue"
-        dataSourceFilter:
-        combineFilters: "And"
-        limit: "100"
-        type: "Standard"
-        primaryKeys:
-        warehouse: "[Environment Default]"
-        database: "[Environment Default]"
-        schema: "[Environment Default]"
-        targetTable: "SF_AccountHistoryLoad"
-        stage: "[Custom]"
-        stagePlatform: "Snowflake Managed"
-        loadOptions:
-        autoDebug: "Off"
-      postProcessing:
-        updateOutputMessage:
-        updateScalarVariables:
 design:
   components:
     Start:
@@ -657,8 +620,3 @@ design:
         x: 160
         "y": 0
       tempMetlId: 2
-    Salesforce Query:
-      position:
-        x: 160
-        "y": -120
-      tempMetlId: 3
